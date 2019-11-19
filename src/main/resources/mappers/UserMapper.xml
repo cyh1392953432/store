@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.tedu.store.mapper.UserMapper">
+
+    <!--根据uid查询用户数据  -->
+    <select id="findByUid" resultType="cn.tedu.store.entity.User">
+		select uid,username,password,avatar,salt,phone,email,gender,power,is_delete as isDelete
+		from
+			t_user
+	   where
+	    	uid=${uid}
+	</select>
+
+
+</mapper>
